@@ -14,6 +14,7 @@ from kivy.core.audio import SoundLoader
 from kivy.clock import Clock
 from kivy.uix.label import Label
 from random import *
+import time
 from android.permissions import request_permissions, Permission
 
 request_permissions([Permission.READ_EXTERNAL_STORAGE])
@@ -101,7 +102,7 @@ class firstApp(App):
         layout.add_widget(btnsound)
         
         clock=IncrediblyCrudeClock()
-        clock.schedule_interval(clock.update, 1)
+        Clock.schedule_interval(clock.update, 1)
         layout.add_widget(fotito)
         #este boton cierra la app
         btn=Button(text="Bye world")
@@ -112,7 +113,7 @@ class firstApp(App):
   
 class IncrediblyCrudeClock(Label):
 	def update(self,*args):
-		self.text=timeasctime()
+		self.text=time.asctime()
 
 # running the application
 firstApp().run()
