@@ -1,5 +1,5 @@
 # VeryUsefullSoundBoard
-this is a very usefull (Not Really) sound board
+this is a very usefull (Not Really) sound board H1
 Este Soundboard podría ser muy util para usted, tiene efectos de sonido que podría usar para contar una historia (como puertas que rechinan, o caballos corriendo) o para responder a algo que dijo un amigo (bruh), además de una sorpresa especial\n
 Hemos agregado un reloj para que no se le olvide nunca la fecha y hora durante su uso de este VUSB\n
 El apk esta en la carpeta bin. La versiòn más funcional es la 0.9.5\n
