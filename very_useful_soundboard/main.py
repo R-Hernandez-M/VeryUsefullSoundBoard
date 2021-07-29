@@ -11,6 +11,8 @@ from kivy.core.window import Window
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.image import Image
 from kivy.core.audio import SoundLoader
+from kivy.clock import Clock
+from kivy.uix.label import Label
 from random import *
 from android.permissions import request_permissions, Permission
 
@@ -98,15 +100,19 @@ class firstApp(App):
         #btnsound.bind(on_press=firstApp.playSound("test_sound.mp3"))
         layout.add_widget(btnsound)
         
-        
+        clock=IncrediblyCrudeClock()
+        clock.schedule_interval(clock.update, 1)
         layout.add_widget(fotito)
         #este boton cierra la app
         btn=Button(text="Bye world")
         btn.bind(on_press=firstApp.closeApp)
         layout.add_widget(btn)
-        layout.add_widget(fotito2)
+        layout.add_widget(clock)
         return layout
   
+class IncrediblyCrudeClock(Label):
+	def update(self,*args):
+		self.text=timeasctime()
 
 # running the application
 firstApp().run()
